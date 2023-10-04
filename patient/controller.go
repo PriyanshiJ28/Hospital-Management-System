@@ -24,7 +24,7 @@ func (ctrl *Controller) Create(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create patient"})
 		return
 	}
-	c.JSON(http.StatusCreated, pat)
+	c.JSON(http.StatusOK, pat)
 }
 
 func (ctrl *Controller) Get(c *gin.Context) {
