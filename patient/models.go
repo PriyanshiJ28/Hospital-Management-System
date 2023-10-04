@@ -5,7 +5,7 @@ import (
 )
 
 type Patient struct {
-	ID        string `gorm:"type:char(5);primaryKey"`
+	ID        string `gorm:"type:char(5);primaryKey" json:"id"`
 	CreatedAt time.Time
 	UpdatedAt time.Time
 	Name      string `gorm:"column:name;type:varchar(255);not null" json:"name"`
